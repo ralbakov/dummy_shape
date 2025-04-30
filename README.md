@@ -12,12 +12,24 @@
 
 ---
 
-## Установка
+## Установка для сторонних постащиков
 
 ```bash
 pip install git+https://github.com/ralbakov/dummy_shape.git
 ```
 
+## Установка для просмотра исходников и тестирования
+
+1. Клонирование 
+```bash
+git clone https://github.com/ralbakov/dummy_shape.git
+cd dummy-shape
+```
+
+2. Установка dev-зависимостей
+```bash
+poetry install --with dev
+```
 
 ## Быстрый старт, описан в `main.py`
 
@@ -55,6 +67,13 @@ if __name__ == "__main__":
     print(f'{rectangle}, s = {rectangle.area()}')
 ```
 
+## Тесты
+
+1. Запустить pytest:
+```bash
+poetry run pytest -v
+```
+
 
 ## API
 
@@ -81,19 +100,6 @@ ___
   - `is_right() -> bool` — проверяет, прямоугольный ли треугольник.
   - `__str__() —> str` — Triangle(a=`<a>`, b=`<b>`, c=`<c>`).
 ___
-
-
-## Тесты
-
-1. Установить dev-зависимости:
-```bash
-poetry install --with dev
-```
-
-2. Запустить pytest:
-```bash
-poetry run pytest
-```
 
 
 ## Добавление своих фигур
